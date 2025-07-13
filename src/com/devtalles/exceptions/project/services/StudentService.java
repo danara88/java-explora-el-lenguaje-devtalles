@@ -18,7 +18,7 @@ public class StudentService {
      * In charge of executing add use case logic.
      * @param student student to being added to the system
      */
-    public void add(Student student) {
+    public void add(Student student) throws DuplicateStudentException {
         if(student.getName() == null || student.getName().isEmpty()) {
             throw new IllegalArgumentException("El nombre de estudiante no puede estar vacio.");
         }
@@ -40,18 +40,10 @@ public class StudentService {
     }
 
     /**
-     * In charge of executing remove all students use case logic.
-     */
-    public void removeAll() {
-        students.clear();
-        System.out.println("Los estudiantes han sido eliminados.");
-    }
-
-    /**
      * In charge of executing remove by id student use case logic.
      * @param id represents the student id to being removed.
      */
-    public void removeById(String id) {
+    public void removeById(String id) throws StudentNotFoundException {
         Student student = getById(id);
         if(student == null) {
             throw new StudentNotFoundException("El estudiante con ID '" + id + "' no existe.");

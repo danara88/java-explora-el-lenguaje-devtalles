@@ -46,7 +46,7 @@ public class MainProject {
      * In charge of execute different system usec cases.
      * @param selectedMenuOption represents the select menu option
      */
-    private void executeUseCase(int selectedMenuOption) {
+    private void executeUseCase(int selectedMenuOption) throws StudentNotFoundException, DuplicateStudentException {
         switch (selectedMenuOption) {
             case 1:
                 addStudentUseCase();
@@ -66,24 +66,18 @@ public class MainProject {
     /**
      * In charge of executing the add student use case.
      */
-    private void addStudentUseCase() {
+    private void addStudentUseCase() throws DuplicateStudentException {
         String studentId = UiService.inputString("Ingrese el id de la estudiante (Ex. A12345)");
         String studentName = UiService.inputString("Ingrese el nombre del estudiante");
         byte studentAge = UiService.inputByte("Ingrese la edad del estudiante");
-
         Student student = new Student(studentId, studentName, studentAge);
-
-        try {
-            studentService.add(student);
-        } catch (RuntimeException e) {
-            UiService.printSystemError(e.getMessage());
-        }
+        studentService.add(student);
     }
 
     /**
      * In charge of executing the remove student use case.
      */
-    private void removeStudentUseCase() {
+    private void removeStudentUseCase() throws StudentNotFoundException {
         String studentId = UiService.inputString("Ingrese el id de la estudiante (Ex. A12345)");
         studentService.removeById(studentId);
     }
