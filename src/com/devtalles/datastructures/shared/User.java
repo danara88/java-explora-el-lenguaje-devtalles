@@ -1,4 +1,4 @@
-package com.devtalles.datastructures;
+package com.devtalles.datastructures.shared;
 
 import java.util.Objects;
 

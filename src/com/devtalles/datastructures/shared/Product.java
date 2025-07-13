@@ -1,4 +1,4 @@
-package com.devtalles.datastructures;
+package com.devtalles.datastructures.shared;
 
 public class Product implements Comparable<Product> {
     private int id;

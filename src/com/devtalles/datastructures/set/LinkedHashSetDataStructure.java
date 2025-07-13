@@ -1,6 +1,6 @@
 package com.devtalles.datastructures.set;
 
-import com.devtalles.datastructures.User;
+import com.devtalles.datastructures.shared.User;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

@@ -1,6 +1,6 @@
 package com.devtalles.datastructures.map;
 
-import com.devtalles.datastructures.Product;
+import com.devtalles.datastructures.shared.Product;
 
 import java.util.Map;
 import java.util.TreeMap;

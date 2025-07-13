@@ -1,7 +1,6 @@
 package com.devtalles.datastructures.map;
 
-import com.devtalles.datastructures.User;
-import com.devtalles.equals.Person;
+import com.devtalles.datastructures.shared.User;
 
 import java.util.HashMap;
 import java.util.Map;

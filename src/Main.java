@@ -1,9 +1,6 @@
-import com.devtalles.datastructures.iterators.ExampleIterators;
-import com.devtalles.datastructures.iterators.ListIteratorExample;
-import com.devtalles.datastructures.map.HashMapDataStructure;
-import com.devtalles.datastructures.map.TreeMapDataStructure;
-import com.devtalles.datastructures.set.LinkedHashSetDataStructure;
-import com.devtalles.datastructures.set.TreeSetDataStructure;
+import com.devtalles.exceptions.*;
+import com.devtalles.exceptions.exercises.ErrorSimulation;
+import com.devtalles.exceptions.project.MainProject;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +14,17 @@ public class Main {
         // HashMapDataStructure.execute();
         // TreeMapDataStructure.execute();
         // ExampleIterators.execute();
-        ListIteratorExample.execute();
+        // ListIteratorExample.execute();
+        // IntroductionExceptions.execute();
+        // FileExceptions.execute();
+        // CheckedExceptionExample.execute();
+        // UncheckedExceptionExample.execute();
+        // TryWithResourceExample.execute();
+        // MultiResourcesExample.execute();
+        // AutoClosableExample.execute();
+        // ErrorSimulation.execute();
+
+       MainProject mainProject = new MainProject();
+       mainProject.execute();
     }
 }
